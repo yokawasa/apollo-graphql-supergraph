@@ -17,7 +17,6 @@ spec:
       containers:
       - name: products
         image: ghcr.io/yokawasa/apollo-graphql-supergraph/subgraph-products:latest
-        #image: prasek/subgraph-products:latest
         ports:
         - containerPort: 4000
 ---
@@ -51,7 +50,6 @@ spec:
     spec:
       containers:
       - name: users
-        #image: prasek/subgraph-users:latest
         image: ghcr.io/yokawasa/apollo-graphql-supergraph/subgraph-users:latest
         ports:
         - containerPort: 4000
@@ -86,7 +84,6 @@ spec:
     spec:
       containers:
       - name: inventory
-        #image: prasek/subgraph-inventory:latest
         image: ghcr.io/yokawasa/apollo-graphql-supergraph/subgraph-inventory:latest
         ports:
         - containerPort: 4000
@@ -121,7 +118,6 @@ spec:
     spec:
       containers:
       - name: pandas
-        #image: prasek/subgraph-pandas:latest
         image: ghcr.io/yokawasa/apollo-graphql-supergraph/subgraph-pandas:latest
         ports:
         - containerPort: 4000
