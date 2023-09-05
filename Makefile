@@ -25,13 +25,13 @@ docker-build-subgraphs: ## Build subgraphs containers
 docker-push-subgraphs: docker-build-subgraphs  ## Push subgraphs images to registries
 	@echo "docker login..."
 	@echo ${GHPAT} | docker login ghcr.io -u ${GHUSER} --password-stdin
-	docker tag subgraphs_products ghcr.io/${GHUSER}/${GHREPO}/subgraph-products:latest
+	docker tag subgraphs-products ghcr.io/${GHUSER}/${GHREPO}/subgraph-products:latest
 	docker push ghcr.io/${GHUSER}/${GHREPO}/subgraph-products:latest
-	docker tag subgraphs_users ghcr.io/${GHUSER}/${GHREPO}/subgraph-users:latest
+	docker tag subgraphs-users ghcr.io/${GHUSER}/${GHREPO}/subgraph-users:latest
 	docker push ghcr.io/${GHUSER}/${GHREPO}/subgraph-users:latest
-	docker tag subgraphs_inventory ghcr.io/${GHUSER}/${GHREPO}/subgraph-inventory:latest
+	docker tag subgraphs-inventory ghcr.io/${GHUSER}/${GHREPO}/subgraph-inventory:latest
 	docker push ghcr.io/${GHUSER}/${GHREPO}/subgraph-inventory:latest
-	docker tag subgraphs_pandas ghcr.io/${GHUSER}/${GHREPO}/subgraph-pandas:latest
+	docker tag subgraphs-pandas ghcr.io/${GHUSER}/${GHREPO}/subgraph-pandas:latest
 	docker push ghcr.io/${GHUSER}/${GHREPO}/subgraph-pandas:latest
 
 .PHONY: k8s-deploy

@@ -24,7 +24,7 @@ spec:
         {}      
       containers:
         - name: router
-          image: ghcr.io/apollographql/router:v1.4.0
+          image: ghcr.io/apollographql/router:v1.29.1
           imagePullPolicy: IfNotPresent
           # startup option: https://www.apollographql.com/docs/router/managed-federation/setup#3-modify-your-apollo-router-startup-if-necessary
           args:
